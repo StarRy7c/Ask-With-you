@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #ff8fab; /* Light Pink */
+    --secondary-color: #ffdde1; /* Lighter Pink */
+    --accent-color: #f76a8c; /* Stronger Pink / Coral */
+    --text-color: #5C3D5A; /* Dark Plum */
+    --text-light: #ffffff;
+    --bg-color-start: #ffdde1; /* Light Pink */
+    --bg-color-mid: #ee9ca7; /* Pink */
+    --bg-color-end: #ffdde1; /* Light Pink */
+    --heart-color: #ff4d6d; /* Bright Pink for hearts */
+    --button-yes-bg: #4CAF50; /* Green */
+    --button-yes-hover-bg: #45a049;
+    --button-no-bg: #f44336;  /* Red */
+    --button-no-hover-bg: #e53935;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+    overflow: hidden; /* Prevents scrollbars from temporary large elements */
+    background: linear-gradient(135deg, var(--bg-color-start), var(--bg-color-mid), var(--bg-color-end));
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+    width: 500px; /* Max width for larger screens */
+    overflow: hidden; /* For popups */
+}
+
+.content-wrapper {
+    padding: 20px;
+}
+
+#hearts-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.heart-particle {
+    position: absolute;
+    background-image: url('../assets/images/heart-particle.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    animation: floatHeart 10s infinite ease-in-out;
+    opacity: 0;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(100vh) scale(0.5) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(40vh) scale(1) rotate(15deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-5vh) scale(0.7) rotate(-15deg);
+        opacity: 0;
+    }
+}
+
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: var(--accent-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    min-height: 60px; /* To prevent layout shift during typing */
+}
+
+.sub-heading {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.1s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: var(--text-light);
+}
+
+#yes-button {
+    background-color: var(--button-yes-bg);
+}
+
+#yes-button:hover {
+    background-color: var(--button-yes-hover-bg);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+}
+
+#no-button {
+    background-color: var(--button-no-bg);
+    position: relative; /* For movement */
+}
+
+#no-button:hover {
+    background-color: var(--button-no-hover-bg);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(244, 67, 54, 0.4);
+}
+
+/* 'No' button dynamic styles */
+.no-button-evade {
+    animation: evade 0.3s linear alternate;
+}
+@keyframes evade {
+    0% { transform: translate(0,0) rotate(0deg); }
+    25% { transform: translate(10px, 5px) rotate(2deg); }
+    50% { transform: translate(-10px, -5px) rotate(-2deg); }
+    75% { transform: translate(5px, -10px) rotate(1deg); }
+    100% { transform: translate(-5px, 10px) rotate(-1deg); }
+}
+
+.no-button-tiny {
+    padding: 5px 10px !important;
+    font-size: 0.8em !important;
+    border-radius: 5px !important;
+}
+
+.no-button-huge {
+    padding: 20px 40px !important;
+    font-size: 1.5em !important;
+    border-radius: 50px !important;
+}
+
+.no-button-square {
+    border-radius: 0 !important;
+}
+
+.no-button-transparent {
+    background-color: transparent !important;
+    color: var(--accent-color) !important;
+    border: 2px solid var(--accent-color) !important;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--text-color);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    position: relative;
+    max-width: 80%;
+    width: 400px;
+    animation: popupOpen 0.5s ease forwards;
+}
+
+@keyframes popupOpen {
+    0% { transform: scale(0.7) translateY(-20px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.popup-content h2 {
+    font-family: 'Pacifico', cursive;
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+.popup-content .girlfriend-name {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.close-popup, .close-love-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.close-popup:hover, .close-love-popup:hover {
+    color: var(--accent-color);
+}
+
+#music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#music-toggle:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.responsive-gif {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+        max-width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+        min-height: 45px; /* Adjust for smaller screens */
+    }
+    .sub-heading {
+        font-size: 1em;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+    }
+    #no-button, #yes-button {
+        width: 80%; /* Make buttons take more width */
+        max-width: 250px;
+    }
+    .popup-content {
+        padding: 20px;
+        width: 90%;
+    }
+    #love-you-lottie {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    #apology-lottie {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    .responsive-gif {
+        max-width: 80%;
+    }
+  }
+
