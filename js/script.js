@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Tenor GIF URLs (Replace with your own) ---
     const cuteGifUrls = [
-        "https://tenor.com/view/bored-sad-gif-13914916832701961889", // Initial cute GIF
-        "https://tenor.com/view/bored-sad-gif-13914916832701961889", // Another option
-        "https://tenor.com/view/bored-sad-gif-13914916832701961889"
+        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif", // Initial cute GIF
+        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif", // Another option
+        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif"
     ];
     const responseGifUrls = [ // GIFs for "No" button responses
-        "https://tenor.com/view/bored-sad-gif-13914916832701961889",
-        "https://tenor.com/view/bored-sad-gif-13914916832701961889",
-        "https://tenor.com/view/bored-sad-gif-13914916832701961889",
+        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif",
+        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif",
+        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif",
         "https://tenor.com/view/bored-sad-gif-13914916832701961889",
         "https://tenor.com/view/bored-sad-gif-13914916832701961889"
     ];
