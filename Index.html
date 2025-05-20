@@ -1,1 +1,58 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Question Just For You ❤️</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <div id="hearts-background"></div>
+
+        <div class="content-wrapper">
+            <img id="cute-gif-top" src="" alt="Cute animated GIF" class="responsive-gif" style="display: none;">
+
+            <h1 id="main-heading"></h1>
+            <p id="sub-heading" class="sub-heading"></p>
+
+            <div class="buttons">
+                <button id="yes-button">Yes! 😍</button>
+                <button id="no-button">No 😢</button>
+            </div>
+
+            <div id="response-gif-container" style="display: none; margin-top: 20px;">
+                <img id="response-gif" src="" alt="Response GIF" class="responsive-gif">
+            </div>
+        </div>
+
+        <div id="apology-popup" class="popup" style="display:none;">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <h2>Oh no, <span class="girlfriend-name">my love</span>! 😥</h2>
+                <p>I'm so sorry if I made you click that button so many times! My heart aches a little. 💔💔💔</p>
+                <p>Please say yes? 🙏</p>
+                <lottie-player id="apology-lottie" src="assets/lottie/heart-burst.json" background="transparent" speed="1" style="width: 150px; height: 150px; margin: 0 auto;" loop autoplay></lottie-player>
+            </div>
+        </div>
+
+        <div id="love-you-popup" class="popup" style="display:none;">
+            <div class="popup-content">
+                 <span class="close-love-popup">&times;</span>
+                <h2 id="love-you-message">I LOVE YOU, <span class="girlfriend-name">darling</span>!!!</h2>
+                <lottie-player id="love-you-lottie" src="assets/lottie/love-you.json" background="transparent" speed="1" style="width: 300px; height: 300px; margin: 0 auto;" loop autoplay></lottie-player>
+                <p>You've made me the happiest person alive! 🥰💖🎉</p>
+            </div>
+        </div>
+
+        <button id="music-toggle"><span id="music-icon">🎵</span></button>
+        <audio id="background-music" loop src="assets/audio/background-music.mp3"></audio>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
