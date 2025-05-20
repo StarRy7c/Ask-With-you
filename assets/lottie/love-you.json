@@ -1,0 +1,60 @@
+{
+  "v": "5.9.6", // Example Lottie version
+  "fr": 30,     // Frame rate
+  "ip": 0,      // In point (start frame)
+  "op": 30,     // Out point (end frame)
+  "w": 500,     // Width
+  "h": 500,     // Height
+  "nm": "Placeholder Love You Animation", // Name of the animation
+  "ddd": 0,     // 3D layer flag
+  "assets": [], // For image or other assets embedded in the animation
+  "layers": [   // Animation layers - THIS IS WHERE THE ACTUAL ANIMATION DATA GOES
+    {
+      "ddd": 0,
+      "ind": 1,
+      "ty": 4, // Shape layer type
+      "nm": "Placeholder Shape",
+      "sr": 1,
+      "ks": { // Transform properties
+        "o": {"a": 0, "k": 100, "ix": 11}, // Opacity
+        "r": {"a": 0, "k": 0, "ix": 10},   // Rotation
+        "p": {"a": 0, "k": [250, 250, 0], "ix": 2}, // Position
+        "a": {"a": 0, "k": [0, 0, 0], "ix": 1},    // Anchor point
+        "s": {"a": 0, "k": [100, 100, 100], "ix": 6} // Scale
+      },
+      "ao": 0, // Auto-orient
+      "shapes": [ // Shape details
+        {
+          "ty": "gr", // Group
+          "it": [
+            {
+              "ty": "el", // Ellipse
+              "nm": "Ellipse",
+              "p": {"a": 0, "k": [0, 0], "ix": 2},
+              "s": {"a": 0, "k": [50, 50], "ix": 3},
+              "hd": false
+            },
+            {
+              "ty": "fl", // Fill
+              "c": {"a": 0, "k": [0.8, 0.2, 0.3, 1]}, // Color (RGBA, 0-1 scale)
+              "o": {"a": 0, "k": 100},
+              "r": 1,
+              "hd": false
+            }
+          ],
+          "nm": "Shape Group",
+          "np": 3,
+          "cix": 2,
+          "bm": 0,
+          "ix": 1,
+          "hd": false
+        }
+      ],
+      "ip": 0,
+      "op": 30,
+      "st": 0,
+      "bm": 0
+    }
+  ],
+  "markers": [] // For defining specific points in the animation timeline
+}
