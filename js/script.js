@@ -134,11 +134,26 @@ document.addEventListener('DOMContentLoaded', () => {
   "This button cried when you said no... 🖲️😭",
   "I can’t force your yes... but I can hope. 🌠",
   "I’m still here. Still loving. Still waiting. ❤️"
- "No? Are you sure? 🥺", "Really? Try again! 🤔", "Aw, come on! 💔", "My heart... it's cracking! ραγισμένη καρδιά",
-        "Don't do this to me! 😥", "Pretty please? 🙏", "I'll be sad! 😿", "Is that your final answer? 🧐",
-        "You're breaking my code! 💻💥", "Okay, how about now? 😉", "Please, <NAME>? ✨", "I believe in us! 🥰",
-        "One more chance? 😇", "This is tough love! ❤️‍🩹", "My circuits are fuzzy! 😵", "Maybe a typo? Click Yes! ✅",
-        "You wouldn't... would you? 😨", "Don't make me cry! 😭", "Is this a test? 🧪", "I programmed this with love! ❤️",
+ "No? Are you sure? 🥺", 
+        "Really? Try again! 🤔", 
+        "Aw, come on! 💔", 
+        "My heart... it's cracking! ραγισμένη καρδιά",
+        "Don't do this to me! 😥", 
+        "Pretty please? 🙏", 
+        "I'll be sad! 😿", 
+        "Is that your final answer? 🧐",
+        "You're breaking my code! 💻💥", 
+        "Okay, how about now? 😉", 
+        "Please, <NAME>? ✨", 
+        "I believe in us! 🥰",
+        "One more chance? 😇", 
+        "This is tough love! ❤️‍🩹", 
+        "My circuits are fuzzy! 😵", 
+        "Maybe a typo? Click Yes! ✅",
+        "You wouldn't... would you? 😨", 
+        "Don't make me cry! 😭", 
+        "Is this a test? 🧪", 
+        "I programmed this with love! ❤️",
         "Last chance, <NAME>! 🚨" // This is the 21st, so 20th click will trigger apology before this shows
     ];
 
@@ -227,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
         responseGif.src = responseGifUrls[Math.floor(Math.random() * responseGifUrls.length)];
         responseGifContainer.style.display = 'block';
 
-        if (noClickCount >= 20) {
+        if (noClickCount >= 120) {
             apologyPopup.style.display = 'flex'; // Using flex for centering
             apologyPopup.classList.add('show');
             const apologyLottie = document.getElementById('apology-lottie');
