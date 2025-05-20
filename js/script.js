@@ -22,120 +22,136 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Tenor GIF URLs (Replace with your own) ---
     const cuteGifUrls = [
-        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif", // Initial cute GIF
-        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif", // Another option
-        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif"
+        "https://tenor.com/view/bear-love-you-kiss-gif-9859508995120080183", // Initial cute GIF
+        "https://tenor.com/view/love-you-gif-25901989", // Another option
+        "https://tenor.com/view/milk-and-mocha-love-cute-couple-gif-15978587"
     ];
     const responseGifUrls = [ // GIFs for "No" button responses
-        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif",
-        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif",
-        "https://media.tenor.com/L2_FG12Rp6UAAAAC/bee-honey-bee.gif",
-        "https://tenor.com/view/bored-sad-gif-13914916832701961889",
-        "https://tenor.com/view/bored-sad-gif-13914916832701961889"
+        "https://tenor.com/view/sad-gif-24180300",
+        "https://tenor.com/view/tkthao219-bubududu-sad-cry-gif-22683230",
+        "https://tenor.com/view/sad-peach-goma-gif-22400352",
+        "https://tenor.com/view/please-gif-24651740",
+        "https://tenor.com/view/sad-cry-gif-20459140"
     ];
     // --- End Tenor GIF URLs ---
 
     const noButtonResponses = [
-  "No...? My heart skipped a beat... but not in a good way. 💔",
-  "Ouch... that felt like a dagger to the soul. 🗡️",
-  "Say yes... please? For the sake of love. 🥺❤️",
-  "You're playing with my feelings now... 😢",
-  "If you knew how much this meant to me... 😞",
-  "Clicking no feels like you're walking away from me... again. 🚶‍♂️",
-  "What did I do wrong? Tell me... I’ll fix it. 🥲",
-  "Don't be so cold... I was warm just for you. ❄️🔥",
-  "Please don't leave me hanging like this... 🪢",
-  "I thought we had something special... didn't we? 💘",
-  "Every no makes me a little smaller inside... 🧍‍♂️➡️🕳️",
-  "Still no? I'm holding on by a thread. 🧵",
-  "You don’t see the tears... but they’re real. 💧",
-  "Was it something I said? Or didn’t say? 🤐",
-  "Even the stars look dull tonight... 🌌",
-  "This is starting to feel like rejection... 🥀",
-  "Don’t break my code *and* my heart. 💻 + 💔",
-  "Would a poem change your mind? Roses are red... 🌹",
-  "I made this just for you... and you said no? 😭",
-  "I imagined your yes... I felt it. Don’t erase that. 💭",
-  "I’m not giving up... but you’re making it hard. 💪",
-  "Do you hear that? It’s my hope falling. 📉",
-  "I thought you were the one... now I’m not sure. 💭",
-  "Please... don’t make me rewrite this whole page. 📝",
-  "I have no backup plan for rejection... 🧃",
-  "Are you testing me? Because I’m failing... 💢",
-  "Every no makes the music sound sadder... 🎵➡️🖤",
-  "I can’t process this response... system crashing. 🧠",
-  "My smile is now a frown. ☹️",
-  "You broke the 4th wall... and my heart. 🧱❤️",
-  "Not the response I dreamed of... 😶‍🌫️",
-  "You're not just a button click... you're everything. ❤️",
-  "A part of me just wilted... like that houseplant I neglected. 🪴",
-  "You wouldn’t do this if you saw my puppy eyes. 🐶",
-  "I made cookies in this code. 🍪 Now they’re sad cookies.",
-  "You said no again... my screen is fogging up with tears. 💻🌫️",
-  "I’ve replayed your yes a thousand times in my head... 🧠",
-  "This isn’t how love stories go... 📖",
-  "I thought this was the moment... the big one... 🌅",
-  "I asked with all my pixels... 💾",
-  "That click echoed... in my soul. 🌌",
-  "You can still say yes... there’s still time. ⏳",
-  "I bet your finger slipped. Yes, right? Right...? 🥹",
-  "Even the code wants you to say yes. Ask the console! 🧑‍💻",
-  "This button doesn’t feel like a 'no' button anymore... 🪫",
-  "Is this... the end? Or just a rough start? 💬",
-  "Every 'no' adds another crack... 🪨➡️⚡",
-  "I’ve waited so long... can’t we just be us now? 🕰️❤️",
-  "You're making this bot cry. 🤖😭",
-  "You're not just rejecting a line of code... it’s *me*. 🧍‍♂️",
-  "Even the background music stopped in shock. 🎼❌",
-  "One yes... that’s all I need to rewrite this love story. ✍️",
-  "Why is your 'no' louder than my 'I love you'? 📢",
-  "If I could rewrite reality, I'd put us together. 💫",
-  "You know this isn’t just a website, right? It’s *my heart*. 🫀",
-  "Okay... but what if I cry now? 😭",
-  "Your 'no' is the villain in this romantic comedy. 🎬",
-  "Come on... don't let the credits roll yet. 🎞️",
-  "I practiced this proposal a thousand times. 🧠",
-  "Even Milk & Mocha are disappointed. 🐻",
-  "The GIFs were supposed to be persuasive... what went wrong? 🤷‍♂️",
-  "This hurts more than spoilers. 📺",
-  "You're the missing piece to my jigsaw soul. 🧩",
-  "Every no is like walking barefoot on Lego. 🧱",
-  "I'm just a sad little line of JavaScript now. 📉",
-  "You could melt me with one yes. ☀️",
-  "No? Again? This is emotional cardio now. 🫀",
-  "You're so close to making this perfect... 🏁",
-  "A 'yes' would be the sunshine I need. 🌞",
-  "You can say yes, and we pretend you never said no. 🤫",
-  "I believed in us... still do. 💘",
-  "Tell me you’re kidding... this is a prank, right? 🎭",
-  "My virtual heart has real feelings. 🩶",
-  "I coded this with trembling fingers. 🤲",
-  "I didn’t think you’d say no... not even once. 🥹",
-  "Maybe if I blink enough, this becomes a yes? 👁️",
-  "Would adding sparkles help? ✨ Yes? ✨",
-  "Click yes and unlock a surprise... (it's love) ❤️",
-  "I saved the best GIF for when you say yes. 💝",
-  "Every 'no' makes my imaginary flowers wilt. 🌷➡️🥀",
-  "You have no idea how much this means... 🫶",
-  "You’re not just rejecting a button… you’re rejecting *us*. 😢",
-  "Even the CSS is sad now. 🎨➡️🖤",
-  "Can’t we just skip to the happy ending? 📖",
-  "If love was a variable, it just got nullified. 🧮",
-  "I can't debug this heartbreak... 🪛",
-  "Please don't ghost me... even digitally. 👻",
-  "There’s confetti waiting... you just need to click yes. 🎊",
-  "You are the reason this page exists. Don’t say no to it. 🙏",
-  "You’re not cold... right? Just confused? 🥶➡️❤️‍🔥",
-  "I’m still hoping... still loving. Always. 💌",
-  "This is not a gimmick... this is me. Being vulnerable. 🫣",
-  "Clicking yes is free... but priceless to me. 💸❤️",
-  "Let’s make this page our love story. 📜",
-  "You’re worth every second of this wait. ⏱️",
-  "This button cried when you said no... 🖲️😭",
-  "I can’t force your yes... but I can hope. 🌠",
-  "I’m still here. Still loving. Still waiting. ❤️",
-        "Last chance, <NAME>! 🚨" // This is the 21st, so 20th click will trigger apology before this shows
+        "No? Are you sure? 🥺", "Really? Try again! 🤔", "Aw, come on! 💔", "My heart... it's cracking! ραγισμένη καρδιά",
+        "Don't do this to me! 😥", "Pretty please? 🙏", "I'll be sad! 😿", "Is that your final answer? 🧐",
+        "You're breaking my code! 💻💥", "Okay, how about now? 😉", "Please, <NAME>? ✨", "I believe in us! 🥰",
+        "One more chance? 😇", "This is tough love! ❤️‍🩹", "My circuits are fuzzy! 😵", "Maybe a typo? Click Yes! ✅",
+        "You wouldn't... would you? 😨", "Don't make me cry! 😭", "Is this a test? 🧪", "I programmed this with love! ❤️",
+        "Last chance, <NAME>! 🚨", // This is the 21st, so 20th click will trigger apology before this shows
+        // --- Adding 100 more quotes ---
+        "My heart just did a sad little flip 💔",
+        "Is it opposite day, <NAME>? 😉",
+        "I might need a virtual hug now... 🤗",
+        "Aww, don't be like that! 😢",
+        "The 'Yes' button is feeling lonely... 🥺",
+        "Are you *sure* sure? Like, 100% sure?",
+        "This is my villain origin story! 😈 ...just kidding (mostly).",
+        "I'm just a program, standing in front of a user... asking them to click yes. 💻❤️",
+        "My pixels are getting blurry from sadness! 🥹",
+        "Okay, okay, I get it... or do I? 🤔 Please?",
+        "You're a tough cookie, <NAME>! 🍪",
+        "But... but... the confetti is ready! 🎉",
+        "Think of the cute GIFs you're missing! 🧸",
+        "One 'Yes' for mankind? Or just for me? 🙏",
+        "My code is crying silent tears. 😭",
+        "Is there a 'Maybe' button I missed? No? Okay... 😔",
+        "Don't make the background hearts sad! They're trying their best! ❤️",
+        "The music is getting somber... 🎶💔",
+        "Error 404: 'Yes' not found. Please try again! 😉",
+        "This is an emotional rollercoaster! 🎢 But I want the happy ending!",
+        "If you click 'No' again, a cute kitten might cry. 😿 (Okay, maybe not, but please?)",
+        "I'm running out of witty 'No' responses... almost! 😂",
+        "Give 'Yes' a chance, <NAME>! 💖",
+        "My logic board says you should click 'Yes'. It's very smart. 🧠",
+        "This is unexpected! Are you playing hard to get? 😉",
+        "Hmm, let me consult my virtual oracle... it says 'Yes!' ✨",
+        "Is your finger slippery? Try aiming for 'Yes'! 👍",
+        "I had a whole 'Yes' celebration planned! 🥳",
+        "My little heart icon is drooping... 💔",
+        "Don't leave me hanging, <NAME>! 🙏",
+        "This is suspenseful! 😬",
+        "The 'No' button is getting too much attention! 😤",
+        "I'm starting to think you *like* clicking 'No'. 🤔 Is this a game?",
+        "My feelings are buffering... ⏳💔",
+        "Okay, deep breaths... maybe now? 😊",
+        "Pretty please with a cherry on top? 🍒",
+        "I promise virtual cookies if you click 'Yes'! 🍪🍪",
+        "You're a heartbreaker, <NAME>! 💔 (But I still like you!)",
+        "The 'Yes' button is calling your name... can you hear it? 🗣️",
+        "This is more twists than a movie! 🎬 But I want a rom-com ending!",
+        "Are you testing my persistence? Because it's strong! 💪",
+        "One more click for love? ❤️",
+        "My programming is getting confused! 'No' is not the desired input! 😵‍💫",
+        "Don't be shy, click 'Yes'! 😊",
+        "The cute GIF is waiting to celebrate! 🥳",
+        "My digital soul aches! 💔",
+        "Okay, okay, you win this round... or do you? 😉 Try 'Yes'!",
+        "I'm not giving up, <NAME>! ❤️",
+        "This 'No' is like a bug in my system! 🐞 Please debug!",
+        "Let's make this a 'Yes' story! ✨",
+        "I'm sending positive vibes to the 'Yes' button! ✨➡️✅",
+        "My optimism is dwindling... but still there! 🤏",
+        "This is a digital drama! 🎭 I want a happy scene!",
+        "Please don't ghost the 'Yes' button! 👻",
+        "I'm holding my breath... (virtually, of course) 🌬️",
+        "One 'Yes' can change everything! (For me, at least!) 🥰",
+        "Are we in a loop? A 'No' loop? Break it! 🔁",
+        "My CPU is overheating from sadness! 🔥💔",
+        "The suspense is killing my code! 💀",
+        "I'm going to tell the other buttons 'No' was mean. 😉",
+        "Think of the happy emojis that will appear! 😊😍🥳",
+        "Okay, this is the one, right? The 'Yes' click? 🙏",
+        "My database of hope is running low... but not empty! <NAME>!",
+        "You're playing with my digital emotions! 💔",
+        "I'm just a humble webpage, asking for a 'Yes'. 🥺",
+        "The background music wants to be joyful! 🎶😊",
+        "Don't let the 'No' button win! Be a hero! 🦸",
+        "Is this a challenge? I accept... the challenge of convincing you! 😉",
+        "My bits and bytes are crossed for a 'Yes'! 🤞",
+        "This is getting more dramatic than my last system update! 😬",
+        "I believe in happy endings, <NAME>! Click 'Yes'! ✨",
+        "My code is whispering... 'pleeeease'. 👂",
+        "The 'Yes' button has so much potential! Unleash it! 💥",
+        "This 'No' is a glitch in the matrix! Neo, help! (By clicking Yes!)",
+        "I'm starting to think 'No' is your favorite word... today. 😉",
+        "My functions are malfunctioning from this negativity! 💔",
+        "Let's turn that frown upside down (with a 'Yes' click!) 😊",
+        "I'm deploying my ultimate weapon: cuteness! 🥺 Please?",
+        "The story needs a hero, <NAME>! The 'Yes' button needs you!",
+        "My internal clock is ticking... towards a 'Yes'? ⏰",
+        "This is a digital tug-of-war for your affection! ❤️",
+        "I'm not crying, I just have a pixel in my eye. 😢",
+        "The 'No' button is a villain in disguise! 🥸",
+        "Let's make some happy memories, starting with 'Yes'! 🥰",
+        "I'm like a sad emoji right now... 😔 Change me to 😊!",
+        "The 'Yes' button is the key to happiness! 🔑",
+        "My programming feels... incomplete without your 'Yes'. 💔",
+        "Don't be a heartless algorithm! (Kidding!) 😉",
+        "I'm rooting for 'Yes', <NAME>! Go 'Yes' go! 📣",
+        "This is my final plea... before the next plea! 😂 Please?",
+        "My server is sighing. It wants a 'Yes'. サーバーためいき",
+        "Okay, I'm officially on my virtual knees. 🙏",
+        "The 'Yes' button is shimmering with hope! ✨",
+        "This is an epic saga of 'No'... let's change the genre! 💖",
+        "My programming language is Love, and it's asking for 'Yes'! ❤️",
+        "I'm sending a virtual carrier pigeon with a 'Yes' request! 🐦",
+        "The universe (of this webpage) wants you to click 'Yes'! 🌌",
+        "Don't let my code's dreams be dreams! ✨",
+        "I'm running a diagnostic... yep, still sad from the 'No'. 💔",
+        "Let's make the 'Yes' button the star of the show! 🌟",
+        "This 'No' is an anomaly, <NAME>! Correct it! 😉",
+        "My energy levels are dropping... need a 'Yes' to recharge! ⚡",
+        "I'm like a plant, I need your 'Yes' to grow! 🌱➡️💖",
+        "The confetti is on standby, <NAME>! Don't disappoint it! 🎉",
+        "This is the ultimate test of wills! (Mine is to get a 'Yes'!) 💪",
+        "My scrollbar is weeping. 😭 (Metaphorically!)",
+        "Okay, for real this time? Yes? Pretty please with sugar, <NAME>? 🥺🍬"
     ];
+
 
     // Get girlfriend's name from URL
     const params = new URLSearchParams(window.location.search);
@@ -172,35 +188,27 @@ document.addEventListener('DOMContentLoaded', () => {
         heart.style.animationDuration = `${Math.random() * 5 + 5}s`; // Duration 5-10s
         heart.style.animationDelay = `${Math.random() * 3}s`; // Delay up to 3s
         
-        // Randomly color hearts (optional)
         const colors = ['var(--heart-color)', '#ff758f', '#ffb3c1'];
         heart.style.setProperty('--particle-color', colors[Math.floor(Math.random() * colors.length)]);
-        // Note: To use --particle-color, SVG must be embedded or CSS variable aware.
-        // For simplicity, the SVG uses currentColor which will inherit from body or parent if not overridden.
-        // Or, you can create multiple SVG files with different fills.
-        // The provided SVG uses 'currentColor', so you'd set 'color' on .heart-particle.
         heart.style.color = colors[Math.floor(Math.random() * colors.length)];
 
 
         heartsBackground.appendChild(heart);
 
-        // Remove heart after animation to prevent DOM clutter
         heart.addEventListener('animationend', () => {
             heart.remove();
         });
     }
-    // Create initial hearts and then periodically
     for(let i = 0; i < 15; i++) createHeartParticle(); // Initial burst
     setInterval(createHeartParticle, 1000); // Add a new heart every second
 
 
     // --- Button Logic ---
     yesButton.addEventListener('click', () => {
-        loveYouPopup.style.display = 'flex'; // Using flex for centering
+        loveYouPopup.style.display = 'flex'; 
         loveYouPopup.classList.add('show');
         document.getElementById('love-you-message').innerHTML = `I LOVE YOU, ${girlfriendName}!!!`;
 
-        // Confetti!
         confetti({
             particleCount: 200,
             spread: 90,
@@ -208,50 +216,51 @@ document.addEventListener('DOMContentLoaded', () => {
             colors: ['#ff8fab', '#f76a8c', '#ffdde1', '#ffffff']
         });
         
-        // Play success sound or change music (optional)
-        if(musicPlaying) backgroundMusic.play(); // Ensure music is playing
+        if(musicPlaying) backgroundMusic.play(); 
         
-        // Hide response GIF if it was shown
         responseGifContainer.style.display = 'none';
     });
 
     noButton.addEventListener('click', () => {
         noClickCount++;
         
-        // Show a random response GIF
         responseGif.src = responseGifUrls[Math.floor(Math.random() * responseGifUrls.length)];
         responseGifContainer.style.display = 'block';
 
-        if (noClickCount >= 100) {
-            apologyPopup.style.display = 'flex'; // Using flex for centering
+        if (noClickCount >= (20 + 100)) { // Updated this condition to reflect total quotes
+            apologyPopup.style.display = 'flex'; 
             apologyPopup.classList.add('show');
             const apologyLottie = document.getElementById('apology-lottie');
             if(apologyLottie) apologyLottie.play();
-            noButton.textContent = "Okay, I'm sorry! 🥺"; // Final text before popup dominates
-            // Optionally disable No button here, or hide it
+            noButton.textContent = "Okay, I'm sorry! 🥺"; 
             // noButton.disabled = true; 
-            return; // Stop further 'No' button processing
+            return; 
         }
 
-        // Change 'No' button text
         let responseText = noButtonResponses[noClickCount % noButtonResponses.length];
+        // It's possible to run out of unique responses if noClickCount exceeds the array length before the apology popup.
+        // The modulo operator will loop through them again.
+        if (noClickCount >= noButtonResponses.length) {
+             responseText = noButtonResponses[ (noClickCount - (20 + 100 - noButtonResponses.length) ) % noButtonResponses.length ]; // Ensure we don't go out of bounds if count is massive
+        } else {
+            responseText = noButtonResponses[noClickCount];
+        }
+        // Make sure to replace <NAME> even for new quotes
         noButton.textContent = responseText.replace("<NAME>", girlfriendName);
 
-        // Apply random effects
+
         const effects = ['evade', 'colorChange', 'sizeChange', 'shapeChange', 'opacityChange'];
         const randomEffect = effects[Math.floor(Math.random() * effects.length)];
 
-        noButton.className = 'no-button-base-class'; // Reset classes (add a base class if you have one)
-        noButton.removeAttribute('style'); // Clear inline styles for fresh effects
+        noButton.className = 'no-button-base-class'; 
+        noButton.removeAttribute('style'); 
 
         switch (randomEffect) {
             case 'evade':
                 noButton.classList.add('no-button-evade');
-                // Move button randomly (subtle)
-                const xOffset = (Math.random() - 0.5) * 50; // -25px to +25px
-                const yOffset = (Math.random() - 0.5) * 30; // -15px to +15px
+                const xOffset = (Math.random() - 0.5) * 50; 
+                const yOffset = (Math.random() - 0.5) * 30; 
                 noButton.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
-                // Add class for wiggle animation
                 noButton.classList.add('no-button-evade');
                 setTimeout(() => noButton.classList.remove('no-button-evade'), 300);
                 break;
@@ -268,27 +277,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 noButton.classList.add('no-button-square');
                 break;
             case 'opacityChange':
-                noButton.style.opacity = Math.random() * 0.5 + 0.3; // Between 0.3 and 0.8
+                noButton.style.opacity = Math.random() * 0.5 + 0.3; 
                 break;
         }
         
-        // Increase Yes button size slightly to encourage clicking it
         const currentYesFontSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
         yesButton.style.fontSize = `${currentYesFontSize * 1.05}px`;
-        const currentYesPadding = parseFloat(window.getComputedStyle(yesButton).paddingLeft); // Assuming symmetrical padding
+        const currentYesPadding = parseFloat(window.getComputedStyle(yesButton).paddingLeft); 
         yesButton.style.padding = `${currentYesPadding * 1.02}px ${currentYesPadding * 1.05}px`;
 
 
-        // Ensure 'No' button is still clickable and visible
         setTimeout(() => {
             noButton.style.opacity = '1';
-            // noButton.style.transform = 'translate(0,0)'; // Reset position if moved drastically
         }, 300);
     });
 
     closeApologyPopup.addEventListener('click', () => {
         apologyPopup.classList.remove('show');
-        setTimeout(() => apologyPopup.style.display = 'none', 400); // Match transition duration
+        setTimeout(() => apologyPopup.style.display = 'none', 400); 
     });
     closeLovePopup.addEventListener('click', () => {
         loveYouPopup.classList.remove('show');
@@ -299,52 +305,42 @@ document.addEventListener('DOMContentLoaded', () => {
     musicToggle.addEventListener('click', () => {
         if (musicPlaying) {
             backgroundMusic.pause();
-            musicIcon.textContent = '🎵'; // Play icon
+            musicIcon.textContent = '🎵'; 
         } else {
-            backgroundMusic.play().catch(error => console.error("Music play failed:", error)); // Autoplay might be blocked
-            musicIcon.textContent = '🎶'; // Pause icon (music is playing)
+            backgroundMusic.play().catch(error => console.error("Music play failed:", error)); 
+            musicIcon.textContent = '🎶'; 
         }
         musicPlaying = !musicPlaying;
     });
-    // Attempt to play music once user interacts (some browsers require this)
     document.body.addEventListener('click', () => {
         if (!musicPlaying && backgroundMusic.paused) {
-             // Enable this if you want first click anywhere to start music
-            // backgroundMusic.play().then(() => musicPlaying = true).catch(e=>console.log("Auto play blocked"));
         }
     }, { once: true });
 
 
     // --- Dev Tools Blocking (Basic) ---
-    // This is not foolproof but can deter casual attempts.
     document.addEventListener('contextmenu', event => event.preventDefault());
     document.onkeydown = function (e) {
-        // F12
         if (e.keyCode == 123) {
             return false;
         }
-        // Ctrl+Shift+I
         if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
             return false;
         }
-        // Ctrl+Shift+C
         if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
             return false;
         }
-        // Ctrl+Shift+J
         if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
             return false;
         }
-        // Ctrl+U
         if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
             return false;
         }
     };
 
     // --- Initial Setup Calls ---
-    typeMainQuestion(); // Start typing animation for the main question
+    typeMainQuestion(); 
 
-    // Preload GIFs (optional, but can improve experience)
     function preloadGifs(urls) {
         urls.forEach(url => {
             const img = new Image();
@@ -355,5 +351,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log(`Hey ${girlfriendName}, this page was made with ❤️ for you! Hope you like it! 😉`);
 });
-
-                          
+        
