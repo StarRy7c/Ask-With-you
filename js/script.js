@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => { // Added async here
     const cuteGifUrls = [
         "https://media3.giphy.com/media/qQdL532ZANbjy/giphy.gif?cid=6c09b952kak5o1f6oiwuigm2epv8u0dglgcauhcvj7atn0co&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g",
         "https://media0.giphy.com/media/VywjKLbM7bU3e/giphy.gif?cid=6c09b95293pd5zdhc6xde8o7gbyf2aoel67jt5gj1ggvnfef&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g", // Example different cute gif
-        "https://media1.giphy.com/media/kUiskkTkNMUyk/giphy.gif?cid=6c09b952abx5hc5l0dv9tq2n8hgv9ium2e2sv8h1ua7pzv2u&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" // Example different cute gif
+        "https://media1.giphy.com/media/kUiskkTkNMUyk/giphy.gif?cid=6c09b952abx5hc5l0dv9tq2n8hgv9ium2e2sv8h1ua7pzv2u&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g", // Example different cute gif
         "https://media4.giphy.com/media/l41YdDNnasCOd2TWo/giphy.gif?cid=6c09b952bgb62cki0sud7oec5zfuusy4n3f942d5ps1j4bzz&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g",
         "https://media2.giphy.com/media/lwYxf0qKEjnoI/giphy.gif?cid=6c09b952vsyfsk70s206x9tlzss49tdkjuasgqgeykc6l69z&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g",
         "https://media0.giphy.com/media/9Y5BbDSkSTiY8/giphy.gif?cid=6c09b952kw2evi6x5lpekg99kkkwm79q3c3284v2epboemgv&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g",
