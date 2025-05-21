@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async () => { // Added async here
     let noButtonResponses = []; // Initialize as empty, will be filled by fetch
 
     // --- URL for the specific "No" response GIF ---
-    const specificNoResponseGifUrl = "https://media3.giphy.com/media/qQdL532ZANbjy/giphy.gif?cid=6c09b952kak5o1f6oiwuigm2epv8u0dglgcauhcvj7atn0co&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g";
+    const specificNoResponseGifUrl = "......gif";
 
     // --- Tenor GIF URLs (For initial cute GIF) ---
     const cuteGifUrls = [
